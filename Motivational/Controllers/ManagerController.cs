@@ -12,7 +12,7 @@ namespace Motivational.Controllers
         //Get : Accounts/Ascending
         public ActionResult Ascending()
         {
-            var admin   = new Accounts() { Company "whinstone" };
+            var admin   = new Accounts() { Company = "whinstone" };
             return View(admin);
 
         }
