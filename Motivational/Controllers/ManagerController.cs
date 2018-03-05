@@ -40,6 +40,24 @@ namespace Motivational.Controllers
         {
             return Content(year + "/" + month);
         }
+
+        public ActionResult Random()
+        {
+            var acca = new Accounts() { Employees = "Finance manager"};
+            var customers = new List<Customer>
+            {
+                new Customer {Name = "Customer =1" },
+                new Customer {Name = "Customer =2" }
+            };
+
+            var viewModels = new RandomAccountsViewModels;
+            {
+                Accounts = acca;
+                Customer = Customer;
+            }
+            ViewData["Accounts"] = acca;
+            return View();
+         }
     }
     
 }

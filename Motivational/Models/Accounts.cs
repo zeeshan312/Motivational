@@ -9,6 +9,11 @@ namespace Motivational.Models
     {
         public int Id { get; set; }
         public string Company { get; set; }
-        public byte Employees { get; set; }
+        public string  Employees { get; set; }
+
+        public static implicit operator Accounts(Accounts v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
