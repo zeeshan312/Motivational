@@ -14,6 +14,11 @@ namespace Motivational
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                             "AccountsByReleaseDate",
+                             "accounts/released/{year}/{month}",
+                             new { controller = "Manager", action = "ByReleaseDate" }
+                );
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
