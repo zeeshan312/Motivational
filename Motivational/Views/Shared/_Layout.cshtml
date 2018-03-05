@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model Motivational.ViewModels.RandomAccountsViewModels;
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -9,6 +10,7 @@
 
 </head>
 <body>
+    @Html.Partial("_NavBar",Model.Customer)
     <div class="container body-content">
         @RenderBody()
         <hr />

@@ -11,9 +11,6 @@ namespace Motivational.Models
         public string Company { get; set; }
         public string  Employees { get; set; }
 
-        public static implicit operator Accounts(Accounts v)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
