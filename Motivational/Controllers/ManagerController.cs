@@ -10,7 +10,7 @@ namespace Motivational.Controllers
     public class ManagerController : Controller
     {
         //Get : Accounts/Ascending
-        public ActionResult Ascending()
+        public ActionResult s()
         {
             var admin = new Accounts() { Company = "whinstone" };
             //  return View(admin);
@@ -43,21 +43,23 @@ namespace Motivational.Controllers
 
         public ActionResult Random()
         {
-            var acca = new Accounts() { Employees = "Finance manager"};
+            var acca = new Accounts() { Employees = "Finance manager" };
             var customers = new List<Customer>
             {
                 new Customer {Name = "Customer =1" },
                 new Customer {Name = "Customer =2" }
             };
 
-            var viewModels = new RandomAccountsViewModels;
+            var ViewModels = new ViewModels.RandomAccountsViewModels
             {
-                Accounts = acca;
-                Customer = Customer;
-            }
+                //   Accounts = new acca; 
+                Customer = customers
+            };
+
             ViewData["Accounts"] = acca;
-            return View();
-         }
+            return View(ViewModels);
+        }
+        
     }
     
 }

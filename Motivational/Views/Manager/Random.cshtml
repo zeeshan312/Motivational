@@ -1,0 +1,10 @@
+﻿@model Motivational.ViewModels.RandomAccountsViewModels
+@{
+    ViewBag.Title = "Test";
+}
+@foreach (var java in Model.Customer)
+{
+    <h1>
+         @java.Name
+    </h1>
+}
